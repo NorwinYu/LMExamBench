@@ -1,0 +1,19 @@
+# 忽略生成物与本地环境
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 评测运行记录（本地生成，不入库）
+runs/*
+!runs/.gitkeep
+
+# 题库（本地私有，不入库；用 skills/generate-bank 自行生成）
+bank/*.json
+bank_drill/
+bank_archive/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+*.log

@@ -1,0 +1,66 @@
+{
+  "model": {
+    "name": "your-model",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "api_key": "",
+    "temperature": 0.2,
+    "max_tokens": 2048,
+    "timeout": 300
+  },
+  "judge": {
+    "enabled": true,
+    "debias": true,
+    "base_url": "http://127.0.0.1:11434/v1",
+    "api_key": "",
+    "model": "your-model",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "timeout": 180
+  },
+  "run": {
+    "concurrency": 2,
+    "save_raw": true,
+    "code_samples": 1,
+    "sample": 0,
+    "seed": null,
+    "allow_code_exec": true
+  },
+  "weights": {
+    "preset": "balanced",
+    "roles": {
+      "后端": 1.0,
+      "前端": 1.0,
+      "算法": 1.0,
+      "客户端": 1.0,
+      "数据": 1.0,
+      "测试": 1.0,
+      "运维/SRE": 1.0,
+      "安全": 1.0,
+      "基础架构": 1.0,
+      "机器学习/大模型": 1.0,
+      "通用/HR": 1.0
+    },
+    "presets": {
+      "balanced": {
+        "primary": 0.5,
+        "junior": 0.8,
+        "senior": 1.0,
+        "undergrad": 1.2,
+        "master": 1.2,
+        "ruankao": 1.5,
+        "interview": 1.5,
+        "leetcode": 1.5
+      },
+      "engineer": {
+        "primary": 0.2,
+        "junior": 0.3,
+        "senior": 0.5,
+        "undergrad": 1.0,
+        "master": 1.0,
+        "ruankao": 2.0,
+        "interview": 2.0,
+        "leetcode": 2.0
+      }
+    }
+  }
+}

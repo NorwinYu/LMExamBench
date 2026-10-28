@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LMExamBench · 分层大模型考试评测</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <strong>LMExamBench</strong>
+      <span>分层大模型考试评测</span>
+    </div>
+    <nav class="tabs modes">
+      <button data-mode="single" class="active">单次运行</button>
+      <button data-mode="compare">多运行对比</button>
+      <button data-mode="manage">评测与题库</button>
+      <button data-mode="settings">设置</button>
+    </nav>
+    <div class="meta" id="top-meta"></div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <span class="side-title" id="side-title">运行记录</span>
+        <button class="link-btn" id="refresh-runs">刷新</button>
+      </div>
+      <ul id="run-list" class="run-list"></ul>
+    </aside>
+
+    <main class="content">
+      <!-- 单次运行：上下文栏 + 子页签 + 内容 -->
+      <section id="view-single" class="view">
+        <div class="context-bar" id="single-context"></div>
+        <nav class="subtabs" id="subtabs">
+          <button data-subtab="overview" class="active">总览</button>
+          <button data-subtab="detail">逐题明细</button>
+        </nav>
+        <div id="single-overview"></div>
+        <div id="single-detail" class="hidden"></div>
+      </section>
+
+      <!-- 多运行对比：聚合视图 -->
+      <section id="view-compare" class="view hidden"></section>
+
+      <!-- 评测与题库：操作区 -->
+      <section id="view-manage" class="view hidden"></section>
+
+      <!-- 设置：配置项 -->
+      <section id="view-settings" class="view hidden"></section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
